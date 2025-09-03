@@ -99,8 +99,8 @@ Update PLAN.md when finished with each task and make a git commit at the same ti
   - [x] Test error conditions
 - [x] Documentation
   - [x] Add docstrings with examples
-  - [ ] Update README with usage
-  - [ ] Document JSON output schemas
+  - [x] Update README with usage
+  - [x] Document JSON output schemas
 
 ## Success Criteria
 
@@ -109,7 +109,7 @@ Update PLAN.md when finished with each task and make a git commit at the same ti
 - [x] JSON output for all commands
 - [x] Structured error messages in JSON
 - [x] Tests for each command (11 tests passing)
-- [ ] README with examples
+- [x] README with examples
 
 ## Example Implementation
 
