@@ -5,7 +5,7 @@ from unittest.mock import patch
 import subprocess
 import sys
 import json
-import pandas as pd  # type: ignore[import-untyped]
+import pandas as pd
 
 
 def test_cli_exists():
