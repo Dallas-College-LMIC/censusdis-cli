@@ -20,7 +20,7 @@ Since this package is not yet published on PyPI, install directly from GitHub:
 No installation needed - run directly:
 
 ```bash
-uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover --help
+uvx --from git+https://github.com/Dallas-College-LMIC/censusdis-cli.git census-discover --help
 ```
 
 ### Install as a tool with uv
@@ -28,7 +28,7 @@ uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover
 For frequent use, install it as a tool:
 
 ```bash
-uv tool install git+https://github.com/yourusername/censusdis-cli.git
+uv tool install git+https://github.com/Dallas-College-LMIC/censusdis-cli.git
 ```
 
 ### Development setup
@@ -36,7 +36,7 @@ uv tool install git+https://github.com/yourusername/censusdis-cli.git
 For contributing or modifying the code:
 
 ```bash
-git clone https://github.com/yourusername/censusdis-cli.git
+git clone https://github.com/Dallas-College-LMIC/censusdis-cli.git
 cd censusdis-cli
 uv sync  # Installs all dependencies
 uv run census-discover --help
@@ -51,15 +51,15 @@ If you're using uvx (recommended for one-off commands):
 ### List all datasets
 
 ```bash
-uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover datasets
-uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover datasets --year 2020
+uvx --from git+https://github.com/Dallas-College-LMIC/censusdis-cli.git census-discover datasets
+uvx --from git+https://github.com/Dallas-College-LMIC/censusdis-cli.git census-discover datasets --year 2020
 ```
 
 ### Search datasets
 
 ```bash
-uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover search-datasets acs
-uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover search-datasets "community survey"
+uvx --from git+https://github.com/Dallas-College-LMIC/censusdis-cli.git census-discover search-datasets acs
+uvx --from git+https://github.com/Dallas-College-LMIC/censusdis-cli.git census-discover search-datasets "community survey"
 ```
 
 Or if you've installed it locally or are in the project directory:
@@ -115,7 +115,7 @@ All commands output JSON for easy parsing by automated tools and AI agents. Erro
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/censusdis-cli.git
+git clone https://github.com/Dallas-College-LMIC/censusdis-cli.git
 cd censusdis-cli
 
 # Install all dependencies including dev tools
