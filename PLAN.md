@@ -89,26 +89,26 @@ Update PLAN.md when finished with each task and make a git commit at the same ti
 **Goal**: Ensure all output is agent-friendly JSON
 
 #### Tasks
-- [ ] Output formatting
-  - [ ] Convert pandas DataFrames to JSON
-  - [ ] Format tree structures as nested JSON
-  - [ ] Ensure consistent JSON schema across commands
-- [ ] Error handling
-  - [ ] Catch censusdis exceptions
-  - [ ] Return structured error JSON
-  - [ ] Test error conditions
-- [ ] Documentation
-  - [ ] Add docstrings with examples
+- [x] Output formatting
+  - [x] Convert pandas DataFrames to JSON
+  - [x] Handle NaN and infinity values properly
+  - [x] Ensure consistent JSON schema across commands
+- [x] Error handling
+  - [x] Catch censusdis exceptions
+  - [x] Return structured error JSON
+  - [x] Test error conditions
+- [x] Documentation
+  - [x] Add docstrings with examples
   - [ ] Update README with usage
   - [ ] Document JSON output schemas
 
 ## Success Criteria
 
 ### Core Functionality ✅
-- [ ] All six censusdis discovery functions wrapped in CLI
-- [ ] JSON output for all commands
-- [ ] Structured error messages in JSON
-- [ ] Tests for each command
+- [x] All six censusdis discovery functions wrapped in CLI
+- [x] JSON output for all commands
+- [x] Structured error messages in JSON
+- [x] Tests for each command (11 tests passing)
 - [ ] README with examples
 
 ## Example Implementation

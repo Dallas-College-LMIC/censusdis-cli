@@ -6,6 +6,7 @@ import subprocess
 import sys
 import json
 import pandas as pd
+import numpy as np
 
 
 def test_cli_exists():
@@ -183,3 +184,51 @@ def test_tree_command():
         mock_func.assert_called_once_with("acs/acs5", 2020, "B01001")
         output = json.loads(result.output)
         assert "B01001" in output
+
+
+def test_error_handling_json_format():
+    """Test that errors are returned in structured JSON format."""
+    from src.cli import cli
+
+    # Mock an exception from censusdis
+    with patch(
+        "censusdis.data.variables.all_data_sets",
+        side_effect=Exception("Test error message"),
+    ):
+        runner = CliRunner()
+        result = runner.invoke(cli, ["datasets"])
+
+        # Should exit with error code
+        assert result.exit_code == 1
+
+        # Error should be valid JSON
+        error_output = json.loads(result.output)
+        assert "error" in error_output
+        assert "command" in error_output
+        assert error_output["error"] == "Test error message"
+        assert error_output["command"] == "datasets"
+
+
+def test_dataframe_nan_handling():
+    """Test that NaN values in DataFrames are properly handled in JSON output."""
+    from src.cli import cli
+
+    # Create DataFrame with NaN values
+    mock_df = pd.DataFrame(
+        [
+            {"DATASET": "test", "VALUE": np.nan, "YEAR": 2020},
+            {"DATASET": "test2", "VALUE": 123.45, "YEAR": None},
+        ]
+    )
+
+    with patch("censusdis.data.variables.all_data_sets", return_value=mock_df):
+        runner = CliRunner()
+        result = runner.invoke(cli, ["datasets"])
+
+        assert result.exit_code == 0
+        # JSON should be parseable even with NaN values
+        output = json.loads(result.output)
+        assert len(output) == 2
+        # pandas to_dict('records') converts NaN to None in JSON
+        assert output[0]["VALUE"] is None
+        assert output[1]["YEAR"] is None
