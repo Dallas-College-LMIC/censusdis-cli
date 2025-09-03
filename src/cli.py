@@ -87,7 +87,7 @@ def search_datasets(pattern):
     Returns JSON array of matching datasets.
     """
     try:
-        df = ced.variables.search_data_sets(pattern)
+        df = ced.variables.search_data_sets(pattern=pattern)
         result = dataframe_to_json(df)
         click.echo(safe_json_dumps(result, indent=2))
     except Exception as e:
@@ -140,7 +140,7 @@ def variables(dataset, year, pattern, group):
         - GROUP: Parent group
     """
     try:
-        df = ced.variables.search(dataset, year, pattern=pattern, group=group)
+        df = ced.variables.search(dataset, year, pattern=pattern, group_name=group)
         result = dataframe_to_json(df)
         click.echo(safe_json_dumps(result, indent=2))
     except Exception as e:

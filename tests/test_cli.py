@@ -103,7 +103,7 @@ def test_search_datasets_command():
         result = runner.invoke(cli, ["search-datasets", "acs"])
 
         assert result.exit_code == 0
-        mock_func.assert_called_once_with("acs")
+        mock_func.assert_called_once_with(pattern="acs")
         output = json.loads(result.output)
         assert len(output) == 1
         assert output[0]["DATASET"] == "acs/acs5"
@@ -139,7 +139,9 @@ def test_variables_command():
         result = runner.invoke(cli, ["variables", "acs/acs5", "2020"])
 
         assert result.exit_code == 0
-        mock_func.assert_called_once_with("acs/acs5", 2020, pattern=None, group=None)
+        mock_func.assert_called_once_with(
+            "acs/acs5", 2020, pattern=None, group_name=None
+        )
         output = json.loads(result.output)
         assert len(output) == 1
         assert output[0]["NAME"] == "B01001_001E"
