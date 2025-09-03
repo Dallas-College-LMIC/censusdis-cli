@@ -13,43 +13,67 @@ A command-line interface providing agent-friendly JSON output for Census data di
 
 ## Installation
 
-### Using pip
+Since this package is not yet published on PyPI, install directly from GitHub:
+
+### Quick Start with uvx (Recommended)
+
+No installation needed - run directly:
 
 ```bash
-pip install censusdis-cli
+uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover --help
 ```
 
-### From source
+### Install as a tool with uv
+
+For frequent use, install it as a tool:
+
+```bash
+uv tool install git+https://github.com/yourusername/censusdis-cli.git
+```
+
+### Development setup
+
+For contributing or modifying the code:
 
 ```bash
 git clone https://github.com/yourusername/censusdis-cli.git
 cd censusdis-cli
-pip install -e .
+uv sync  # Installs all dependencies
+uv run census-discover --help
 ```
 
 ## Usage
 
 The CLI provides a `census-discover` command with several subcommands for data discovery.
 
+If you're using uvx (recommended for one-off commands):
+
 ### List all datasets
 
 ```bash
-census-discover datasets
-census-discover datasets --year 2020
+uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover datasets
+uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover datasets --year 2020
 ```
 
 ### Search datasets
 
 ```bash
-census-discover search-datasets acs
-census-discover search-datasets "community survey"
+uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover search-datasets acs
+uvx --from git+https://github.com/yourusername/censusdis-cli.git census-discover search-datasets "community survey"
 ```
+
+Or if you've installed it locally or are in the project directory:
 
 ### Find variable groups
 
 ```bash
+# If installed globally
 census-discover groups acs/acs5 2020
 census-discover groups acs/acs5 2020 --pattern income
+
+# If in project directory
+uv run census-discover groups acs/acs5 2020
+uv run census-discover groups acs/acs5 2020 --pattern income
 ```
 
 ### Search variables
@@ -94,21 +118,21 @@ All commands output JSON for easy parsing by automated tools and AI agents. Erro
 git clone https://github.com/yourusername/censusdis-cli.git
 cd censusdis-cli
 
-# Install development dependencies
-pip install -e ".[dev]"
+# Install all dependencies including dev tools
+uv sync --all-extras
 ```
 
 ### Running Tests
 
 ```bash
 # Run all tests
-pytest
+uv run pytest
 
 # Run with coverage
-pytest --cov
+uv run pytest --cov
 
 # Run with TDD guard (auto-reruns on file changes)
-pytest --tdd
+uv run pytest --tdd
 ```
 
 ## Credits
