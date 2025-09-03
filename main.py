@@ -1,5 +1,12 @@
+#!/usr/bin/env python
+"""Entry point for the Census Discovery CLI."""
+
+from src.cli import cli
+
+
 def main():
-    print("Hello from censusdis-cli!")
+    """Run the CLI."""
+    cli()
 
 
 if __name__ == "__main__":

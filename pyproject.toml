@@ -6,10 +6,14 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "censusdis>=1.4.2",
+    "click>=8.2.1",
 ]
 
 [dependency-groups]
 dev = [
+    "mypy>=1.17.1",
     "pytest>=8.4.1",
+    "pytest-mock>=3.14.1",
     "tdd-guard-pytest>=0.1.2",
+    "types-click>=7.1.8",
 ]
