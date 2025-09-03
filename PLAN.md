@@ -69,21 +69,21 @@ Update PLAN.md when finished with each task and make a git commit at the same ti
 **Goal**: Create CLI commands that directly call censusdis functions
 
 #### Tasks
-- [ ] Dataset commands
-  - [ ] Write test for `datasets` command
-  - [ ] Implement `datasets` → calls `ced.variables.all_data_sets()`
-  - [ ] Write test for `search-datasets` command
-  - [ ] Implement `search-datasets` → calls `ced.variables.search_data_sets()`
-- [ ] Variable commands
-  - [ ] Write test for `groups` command
-  - [ ] Implement `groups` → calls `ced.variables.search_groups()`
-  - [ ] Write test for `variables` command
-  - [ ] Implement `variables` → calls `ced.variables.search()`
-- [ ] Structure commands
-  - [ ] Write test for `geography` command
-  - [ ] Implement `geography` → calls `cgeo.geo_path_snake_specs()`
-  - [ ] Write test for `tree` command
-  - [ ] Implement `tree` → calls `ced.variables.group_tree()`
+- [x] Dataset commands
+  - [x] Write test for `datasets` command
+  - [x] Implement `datasets` → calls `ced.variables.all_data_sets()`
+  - [x] Write test for `search-datasets` command
+  - [x] Implement `search-datasets` → calls `ced.variables.search_data_sets()`
+- [x] Variable commands
+  - [x] Write test for `groups` command
+  - [x] Implement `groups` → calls `ced.variables.search_groups()`
+  - [x] Write test for `variables` command
+  - [x] Implement `variables` → calls `ced.variables.search()`
+- [x] Structure commands
+  - [x] Write test for `geography` command
+  - [x] Implement `geography` → calls `cgeo.geo_path_snake_specs()`
+  - [x] Write test for `tree` command
+  - [x] Implement `tree` → calls `ced.variables.group_tree()`
 
 ### Phase 3: JSON Output & Error Handling
 **Goal**: Ensure all output is agent-friendly JSON
