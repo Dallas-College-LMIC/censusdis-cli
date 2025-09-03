@@ -15,28 +15,28 @@ uv run -m module_name
 ## Running Tests
 ```bash
 # Run all tests
-pytest
+uv run pytest
 
 # Run tests with TDD guard (auto-reruns on file changes)
-pytest --tdd
+uv run pytest --tdd
 
 # Run specific test file
-pytest tests/test_module.py
+uv run pytest tests/test_module.py
 
 # Run with coverage
-pytest --cov
+uv run pytest --cov
 ```
 
 ## Code Quality
 ```bash
 # Format code with ruff
-ruff format .
+uv run ruff format .
 
 # Lint code with ruff
-ruff check --fix .
+uv run ruff check --fix .
 
 # Type check with mypy
-mypy .
+uv run mypy .
 
 # Run all pre-commit hooks
 pre-commit run --all-files

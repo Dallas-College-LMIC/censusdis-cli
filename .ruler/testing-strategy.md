@@ -9,7 +9,7 @@ Follow the Red-Green-Refactor cycle:
 ## Test Guidelines
 - **Test Location**: Place tests in `tests/` directory
 - **Test Naming**: Use `test_*.py` for test files
-- **TDD Guard**: Use `pytest --tdd` for automatic test re-runs during development
+- **TDD Guard**: Use `uv run pytest --tdd` for automatic test re-runs during development
 - **Mocking**: Use pytest-mock to mock censusdis functions
 
 ## Testing Focus
