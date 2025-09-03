@@ -48,21 +48,22 @@ census-discover tree <dataset> <year> <group>            # Wrap group_tree()
 ```
 
 ## Implementation Phases
+Update PLAN.md when finished with each task and make a git commit at the same time.
 
 ### Phase 1: Setup
 **Goal**: Create minimal structure and install dependencies
 
 #### Tasks
-- [ ] Create project structure
-  - [ ] Create `src/` directory and `src/__init__.py`
-  - [ ] Create `tests/` directory
-  - [ ] Create `src/cli.py` file
-- [ ] Install dependencies
-  - [ ] Add click: `uv add click`
-  - [ ] Add pytest-mock: `uv add --dev pytest-mock`
-- [ ] Setup entry point
-  - [ ] Wire up `main.py` to call CLI
-  - [ ] Test basic CLI execution
+- [x] Create project structure
+  - [x] Create `src/` directory and `src/__init__.py`
+  - [x] Create `tests/` directory
+  - [x] Create `src/cli.py` file
+- [x] Install dependencies
+  - [x] Add click: `uv add click`
+  - [x] Add pytest-mock: `uv add --dev pytest-mock`
+- [x] Setup entry point
+  - [x] Wire up `main.py` to call CLI
+  - [x] Test basic CLI execution
 
 ### Phase 2: Wrap censusdis Discovery Functions
 **Goal**: Create CLI commands that directly call censusdis functions
