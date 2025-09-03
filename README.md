@@ -46,6 +46,10 @@ uv run census-discover --help
 
 The CLI provides a `census-discover` command with several subcommands for data discovery.
 
+📖 **[Complete CLI Reference](docs/CLI_REFERENCE.md)** - Comprehensive guide with detailed examples, workflows, and use cases.
+
+### Quick Examples
+
 If you're using uvx (recommended for one-off commands):
 
 ### List all datasets
@@ -108,6 +112,12 @@ All commands output JSON for easy parsing by automated tools and AI agents. Erro
   "command": "command-name"
 }
 ```
+
+## Documentation
+
+- 📖 **[CLI Reference](docs/CLI_REFERENCE.md)** - Complete command reference with examples and workflows
+- 🚀 **[Getting Started Guide](docs/CLI_REFERENCE.md#discovery-workflow)** - Step-by-step data discovery process
+- 💡 **[Use Cases](docs/CLI_REFERENCE.md#common-use-cases)** - Common scenarios and how to approach them
 
 ## Development
 
