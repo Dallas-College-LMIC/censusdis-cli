@@ -10,6 +10,9 @@ dependencies = [
     "pandas>=2.3.2",
 ]
 
+[project.scripts]
+census-discover = "censusdis_cli.cli:cli"
+
 [dependency-groups]
 dev = [
     "mypy>=1.17.1",
@@ -19,3 +22,7 @@ dev = [
     "tdd-guard-pytest>=0.1.2",
     "types-click>=7.1.8",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
