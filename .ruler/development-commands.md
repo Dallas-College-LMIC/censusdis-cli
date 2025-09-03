@@ -1,5 +1,17 @@
 # Development Commands
 
+## Running Python Scripts
+```bash
+# Run the main entry point
+uv run main.py
+
+# Run any Python script
+uv run path/to/script.py
+
+# Run Python modules
+uv run -m module_name
+```
+
 ## Running Tests
 ```bash
 # Run all tests
