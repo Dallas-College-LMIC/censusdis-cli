@@ -1,10 +1,22 @@
 # Development Commands
 
+## Installation & Running the CLI
+```bash
+# Install the package in development mode
+uv sync
+# or
+uv pip install -e .
+
+# Run the CLI after installation
+uv run census-discover --help
+
+# Run specific commands
+uv run census-discover datasets --year 2020
+uv run census-discover variables acs/acs5 2020 --pattern income
+```
+
 ## Running Python Scripts
 ```bash
-# Run the main entry point
-uv run main.py
-
 # Run any Python script
 uv run path/to/script.py
 

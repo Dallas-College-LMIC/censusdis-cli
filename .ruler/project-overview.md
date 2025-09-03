@@ -16,15 +16,21 @@ We're not reimplementing discovery - censusdis already has all the functionality
 ## Project Structure
 ```
 censusdis-cli/
-├── main.py              # Entry point
-├── src/cli.py           # CLI implementation
+├── censusdis_cli/       # Package directory
+│   ├── __init__.py     # Package initialization
+│   └── cli.py          # CLI implementation
 ├── tests/               # Test directory
-├── pyproject.toml       # Project metadata and dependencies
+├── pyproject.toml       # Project metadata, dependencies, and CLI entry point
 ├── flake.nix           # Nix development environment
 ├── .ruler/             # AI agent instructions
 ├── .venv/              # Virtual environment (auto-managed by uv)
 └── uv.lock             # Locked dependencies
 ```
+
+## Installation
+- **Development**: `uv sync` or `uv pip install -e .`
+- **Production**: `uv pip install .`
+- **CLI Command**: After installation, run `census-discover`
 
 ## Key Features
 - Dataset discovery and search
